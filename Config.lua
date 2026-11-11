@@ -47,7 +47,7 @@ local function CreateRow(row)
 		end
 	end)
 
-	row.Name = row:CreateFontString(nil, 'ARTWORK', 'GameFontHighlightSmall')
+	row.Name = row:CreateFontString(nil, 'ARTWORK', 'GameFontHighlightSmall2')
 	row.Name:SetPoint('LEFT', row.Icon, 'RIGHT', 4, 0)
 	row.Name:SetPoint('RIGHT', row.Dropdown, 'LEFT', -4, 0)
 	row.Name:SetJustifyH('LEFT')
