@@ -47,7 +47,7 @@ local function CreateRow(row)
 		end
 	end)
 
-	row.Name = row:CreateFontString(nil, 'ARTWORK', 'GameFontHighlightSmall2')
+	row.Name = row:CreateFontString(nil, 'ARTWORK', 'GameFontHighlight')
 	row.Name:SetPoint('LEFT', row.Icon, 'RIGHT', 4, 0)
 	row.Name:SetPoint('RIGHT', row.Dropdown, 'LEFT', -4, 0)
 	row.Name:SetJustifyH('LEFT')
@@ -132,9 +132,10 @@ local function CreateConfig()
 		end
 	end)
 
-	local hint = frame:CreateFontString(nil, 'ARTWORK', 'GameFontDisableSmall')
-	hint:SetPoint('TOPLEFT', frame.Inset, 'BOTTOMLEFT')
-	hint:SetPoint('BOTTOMRIGHT', -6, 3)
+	local hint = frame:CreateFontString(nil, 'ARTWORK', 'GameFontDisableSmall2')
+	hint:SetPoint('TOPLEFT', frame.Inset, 'BOTTOMLEFT', 0, 1)
+	hint:SetPoint('BOTTOMRIGHT', -6, 4)
+	hint:SetTextColor(0.7, 0.7, 0.7)
 	hint:SetText('Drop an item onto this window to add it')
 
 	scrollBox = CreateFrame('Frame', nil, frame.Inset, 'WowScrollBoxList')
