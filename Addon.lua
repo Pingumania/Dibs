@@ -74,35 +74,6 @@ function ns:OnLoad()
 	end
 end
 
-ns:RegisterSlash('/dibs', function(input)
-	local command, rest = input:match('^(%S*)%s*(.-)%s*$')
-	command = command:lower()
-
-	if command == '' then
-		ns:ToggleConfig()
-	elseif command == 'toggle' then
-		ns:SetEnabled(not DibsDB.enabled)
-		ns:Print(DibsDB.enabled and 'Enabled' or 'Disabled')
-	elseif command == 'add' or command == 'remove' then
-		local item, action = rest:match('^(.-)%s+(%a+)$')
-		action = action and action:lower()
-		if not ns.ROLL_TYPES[action] then
-			item, action = rest, nil
-		end
-
-		local itemId = ns:ParseItem(item)
-		if not itemId then
-			ns:Print('Unknown item: ' .. item)
-		elseif command == 'add' then
-			ns:AddItem(itemId, action)
-		else
-			ns:RemoveItem(itemId)
-		end
-	else
-		ns:Print('Usage: /dibs [toggle | add <link|id> [need|greed|de|pass] | remove <link|id>]')
-	end
-end)
-
 function Dibs_OnAddonCompartmentClick()
 	ns:ToggleConfig()
 end
