@@ -1,0 +1,5 @@
+externals:
+  Libs/Huddle: https://github.com/Pingumania/Huddle.git
+
+ignore:
+  - "*.md"

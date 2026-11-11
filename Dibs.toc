@@ -1,0 +1,19 @@
+## Interface: 16001
+
+## Title: Dibs
+## Notes: Automatically roll on listed group loot items
+## Category: Inventory
+## IconTexture: Interface\Icons\inv_misc_dice_02
+## Author: Pingumania
+## Version: @project-version@
+
+## SavedVariables: DibsDB
+
+## AddonCompartmentFunc: Dibs_OnAddonCompartmentClick
+## AddonCompartmentFuncOnEnter: Dibs_OnAddonCompartmentEnter
+## AddonCompartmentFuncOnLeave: Dibs_OnAddonCompartmentLeave
+
+Libs\Huddle\Embed.xml
+
+Addon.lua
+Config.lua
